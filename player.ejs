@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movies</title>
+	<link rel="icon" href="">
+	<script src="js/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="/css/menu.css">
+	<link rel="stylesheet" type="text/css" href="/css/player.css">
+	<link rel="stylesheet" type="text/css" href="/css/css/all.min.css">
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<script src="js/menu.js"></script>
+
+	<script>
+		window.console = window.console || function(t) {};
+		if (document.location.search.match(/type=embed/gi)) { window.parent.postMessage("resize", "*"); }
+	</script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<%- include('menu.ejs') %>
+		<script src="js/search.min.js"></script>
+		<div class="main">
+			<div class="player">
+				<div id="embed"></div><br>
+				<p style="font-size: 20px"><%= video[0].title %></p>
+				<p style="font-size: 15px">Rating :<%= video[0].rating %>   , Year :<%= video[0].year %></p><br><hr><br>
+				<h4>Discription</h4><br>
+				<p style="font-size: 16px"><%= video[0].discription %></p>
+			</div>
+			<script src="js/embed.js"></script><script>var back='<%= video[0].embeded %>';fucklink('#embed', back);</script>
+
+			<div class="play-list"></div>
+			<script type="text/javascript">
+				var _0x27fb=['\x22></div><div\x20class=\x22details\x22><h2\x20class=\x22title\x22>','\x20class=\x22nav\x22><div\x20class=\x22card\x22><div\x20class=\x22img\x22><img\x20src=\x22https://img.putlocker.how/','</h2><p\x20class=\x22all\x22>\x20Rating\x20:','ajax','GET','play-list','</p></div></div></a>','img','/watch?v=<%=\x20video[0].embeded\x20%>&offset=','scroll','title','genre','length','innerHTML','embeded','scrollTop','json','height'];(function(_0x2b0918,_0x27fb1e){var _0x547184=function(_0x29e51f){while(--_0x29e51f){_0x2b0918['push'](_0x2b0918['shift']());}};_0x547184(++_0x27fb1e);}(_0x27fb,0x118));var _0x5471=function(_0x2b0918,_0x27fb1e){_0x2b0918=_0x2b0918-0x0;var _0x547184=_0x27fb[_0x2b0918];return _0x547184;};function getAjaxData(_0x45b219){$[_0x5471('0xb')]({'url':_0x5471('0x10')+_0x45b219,'type':_0x5471('0xc'),'dataType':_0x5471('0x6'),'success':function(_0x4904de){for(var _0x327019=0x0;_0x327019<_0x4904de[_0x5471('0x2')];_0x327019++){document['getElementsByClassName'](_0x5471('0xd'))[0x0][_0x5471('0x3')]+='<a\x20href=\x22/watch?v='+_0x4904de[_0x327019][_0x5471('0x4')]+_0x5471('0x9')+_0x4904de[_0x327019][_0x5471('0xf')]+_0x5471('0x8')+_0x4904de[_0x327019][_0x5471('0x0')]+_0x5471('0xa')+_0x4904de[_0x327019]['rating']+'</p><p\x20class=\x22all\x22>\x20Year\x20:'+_0x4904de[_0x327019]['year']+'</p><p\x20class=\x22all\x22>\x20Genre\x20:'+_0x4904de[_0x327019][_0x5471('0x1')]+_0x5471('0xe');}}});}var offset=0x0;getAjaxData(0x1);$(window)[_0x5471('0x11')](function(){if($(window)[_0x5471('0x5')]()>=$(document)['height']()-$(window)[_0x5471('0x7')]()){offset+=0x10;getAjaxData(offset);}});
+			</script>
+		</div>
+	</div>
+</body>
+</html>
